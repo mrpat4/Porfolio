@@ -1,0 +1,554 @@
+@font-face{
+    font-family: bhoma;
+    src: url(fonts/fonts/BHoma.woff);
+}
+@font-face{
+    font-family: byekan;
+    src: url(fonts/fonts/BYekan.woff)
+}
+/* Animation KeyFrames */
+@keyframes circleBig{
+    0%{transform: translate(0),scale(0)}
+    50%{transform: translate(-20px,80px) scale(1,1.5)}
+    100%{transform: translate(0),scale(0)
+        
+    }
+}
+@keyframes circle{
+    0%{transform: translate(0),scale(0)}
+    50%{transform: translate(80px,-50px) scale(1,1.5)}
+    100%{transform: translate(0), scale(0)}
+}
+
+@keyframes rect{
+    0%{
+        transform: none;
+    }
+    50%{
+        transform: translate(90px, 100px)
+    }
+    100%{
+        transform: none;
+    }
+}
+
+@keyframes tri{
+    0%{transform:translate(0)rotate(0deg);}
+    50%{
+        transform: translate(-60px,70px) rotate(180deg);
+    }
+    100%{
+        transform: translate(0) rotate(360deg);
+    }
+}
+@keyframes move{
+    0%{transform: translateX(500px)}
+    50%{transform: translateX(-500px)}
+    100%{transform: translateX(0)}
+}
+@keyframes header{
+    0%{transform: translateY(-100px); 
+        opacity:0;
+    }
+    100%{transform: none; 
+        opacity:1
+    }
+}
+
+@keyframes pointer{
+    0%{transform: translateY(-8px);opacity: 1}
+    100% {transform:translateY(20px) ; opacity: 0}
+}
+
+/* Shapes */
+.circle{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: 140%;
+    left: 63%;
+    opacity: 0.5;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: thick;
+    border-color: #fdc620;
+    animation: circleBig 50s linear infinite;
+}
+
+.circleBig{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    top: 90%;
+    left: 25%;
+    opacity: 0.2;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: thick;
+    border-color: red;
+    animation: circle 50s linear infinite;
+}
+
+.rectangle{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: 70%;
+    left: 1%;
+    opacity: 0.5;
+    background-color: wheat;
+    animation: rect 10s linear infinite;
+}
+.tri{
+    position: relative;
+    width: 0;
+	height: 0;
+    top: 38%;
+    left: 65%;;
+	border-top: 100px solid transparent;
+	border-right: 200px solid green;
+	border-bottom: 100px solid transparent;
+    opacity: 0.2;
+    animation: tri linear infinite 60s
+}
+.triSmall{
+    position: relative;
+    width: 0;
+	height: 0;
+    top: 60%;
+    left: 32%;;
+	border-top: 40px solid transparent;
+	border-left: 85px solid blue;
+	border-bottom: 40px solid transparent;
+    opacity: 0.2;
+    animation: tri linear infinite 60s
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    font-family: byekan;
+    /*background: linear-gradient(to right, #13151a 0%,#1c2229 50%,#13151a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13151a', endColorstr='#13151a',GradientType=1 ); /* IE6-9 */
+    overflow-x: hidden;
+    
+}
+
+.rtl {
+    direction: rtl !important;
+    padding-right: 0;
+}
+#navbarMain {
+    background-color:rgba(19,21,26,.8)!important;
+    font-family: bhoma, sans-serif;
+    font-size: 18px;
+}
+.navbar ul li{
+    margin-left: 35px;
+}
+
+
+/*.navbar a{
+color:white !important;
+}*/
+.dropDownMenu{
+    background-color:rgba(19,21,26,.7)!important;
+    margin-right: 0;
+
+}
+.dropDownItems{
+    color:darkgray;
+}
+
+.dropDownItems:hover{
+    color:lightgray !important;
+    text-decoration: none;
+    background:none;
+}
+
+
+.dropdown-menu a:enabled{
+    background-color: transparent!important;
+}
+
+
+
+/* This down Block is for our image and hero header basic*/
+.hero-header{
+    background: url(Pictures/glenn-carstens-peters-282287-unsplash.jpg) no-repeat center; 
+    background-size: cover; 
+    height: 100vh; 
+    position: relative;
+    color: white;
+    animation: header 1.5s cubic-bezier(0,.66,.37,.99) .5s forwards;
+    opacity: 0;
+
+}
+/* this block blow is for darkening the header image */
+.hero-header:before{
+    background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.3));
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+/* this block blow is for border */
+.hero-header:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    border: 1px solid rgba(255,255,255,.2);
+
+}
+
+.header-logo:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 337px;
+    height: 337px;
+    left: 50%;
+    top: 40%;
+    margin-left: -168px;
+    margin-top: -198px;
+    margin-bottom: 155px;
+    background-image: url(Pictures/logo2.png);
+    background-size: 100%;
+    animation: header 1.5s cubic-bezier(0,.66,.37,.99) 1s forwards;
+    opacity: 0;
+}
+
+
+.header-texts{
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 84%;
+    margin-left: -50%;
+    margin-top: -180px;
+    padding-top: 50px;
+    background-size: 100%;
+    z-index: 1;
+    animation: header 1.5s cubic-bezier(0,.66,.37,.99) 1.5s forwards;
+    opacity: 0;
+
+
+}
+.header-hi{
+    font-size: 50px;
+    font-family: 'Tajawal', sans-serif;
+}
+.header-me{
+    font-size: 30px;
+    padding-bottom: 5px;
+    font-family: byekan, sans-serif;
+}
+.header-explain{
+    font-family: byekan, sans-serif;
+}
+
+.btnWarningStyle{
+    color:black;
+    animation: header 1.5s cubic-bezier(0,.66,.37,.99) 2s forwards;
+    opacity: 0;
+}
+
+.btnWarningStyle:hover{
+    background-color: transparent;
+    border-style: solid;
+    border-color: #fdc620;
+    border-width: thin;
+    color:#fdc620;
+}
+
+
+.title{
+    padding-top: 100px;
+    padding-bottom: 30px;
+    color: black;
+    text-align: center;
+}
+
+.works-ido{
+    background-color: #f5f5f5;
+    padding-bottom: 60px;
+}
+
+.cards-body{
+    background-color: white;
+    border-radius: 10px;
+    width:18em;
+    text-align: center;
+    margin: 20px auto;
+    padding: 30px 20px;
+    box-shadow: 3px 3px 30px -10px rgba(0,0,0,0.29);
+    color:dimgray;
+}
+.line{
+    background: rgba(135, 135, 135, 0.5);
+    width: 200px;
+    height: 2px;
+    margin-bottom: 30px!important;
+    margin: 0px auto;
+}
+
+.line2{
+    background: rgba(135, 135, 135, 0.5);
+    width: 200px;
+    height: 2px;
+    margin: 15px auto;
+}
+
+.cards-body p{
+    font-family: bhoma;
+    font-size: 17px;
+}
+.parallax{
+    min-height: 400px;
+    background: transparent;
+}
+
+.text-on-parallax{
+    z-index: 2;
+    position: relative;
+    color:white;
+    padding-top: 20px;
+    text-shadow:0px 5px 7px rgba(0, 0, 0, 1);
+}
+.title-samples{
+    padding-top: 100px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.line-samples{
+    background: rgba(135, 135, 135, 0.5);
+    width: 200px;
+    height: 2px;
+    margin-bottom: 20px!important;
+    margin: 0px auto;
+}
+.line-samples2{
+    background: rgba(255, 255, 255, .6);
+    width: 200px;
+    height: 2px;
+    margin-bottom: 20px!important;
+    margin: 0 auto;
+}
+
+
+.graphic-samples img{
+    width: 300px;
+    margin: 2em auto;
+    box-shadow: 0px 0px 30px 1px rgba(0,0,0,0.2);
+    border-radius: 6px;
+
+}
+
+.graphic-samples .contain img{
+    width: 200px;
+    margin: 2em auto;
+    box-shadow: 0px 0px 30px 1px rgba(0,0,0,0.2);
+    border-radius: 6px;
+
+}
+
+/* instagram section hover things */
+.contain{
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+
+}
+
+
+.overlay2{
+    margin: 2em auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    transition: .5s ease;
+    background-color: rgba(0,0,0, 0.7);
+    opacity: 0;
+    border-radius: 6px;
+
+}
+
+.text{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 130%;
+
+}
+
+.contain:hover .overlay2{
+    opacity: 1;
+}
+
+.packageBackground{
+    background-color: black;
+    box-shadow: 0px 0px 14px 7px rgba(0,0,0,0.2);
+    padding-bottom: 30px;
+}
+
+
+.instaPackTitle{
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    
+}
+
+.instaPackBorder{
+    border:solid white;
+    border-radius:50%;
+    padding: 0 15px;
+}
+
+
+.instaPackPoint{
+    color:white;
+    animation: pointer 1s linear infinite;
+    
+}
+
+.instaPackimg{
+    width: 340px;
+
+}
+.directionFix{
+    justify-content: center;
+    margin: 2em auto;
+    direction: ltr;
+}
+.contact{
+    background-color: black;
+    padding-bottom: 25px;
+    width: 100%;
+}
+
+.form input,textarea,select{
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 30px;
+    direction: rtl;
+    padding: 0px;
+    margin: 0.5em auto;
+    border: solid thin white;
+    border-radius: 6px;
+}
+.form label{
+    color: white !important;
+    text-align: right;
+    width: 300px;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+label::before{
+    content: "* ";
+    color: red;
+    bottom: 10px;
+    font-size: 20px;
+}
+
+#about{
+    direction: rtl;
+    font-size: 17px;
+    font-family: bhoma;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(99,99,99,0.2);
+    padding: 15px 25px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 1px gray ;
+        
+}
+
+#more{display: none;}
+
+footer{
+    background-color: black;
+    padding-top: 35px;
+    margin-top: 30px;
+    color: white;
+}
+footer p{
+    padding-bottom: 5px;
+    margin-bottom: 0;
+    color: lightgray;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.social a{
+    display: inline-block;
+    font-size: 25px;
+    padding: 5px 20px;
+    padding-top: 15px;
+   margin: 5px 10px;
+    border:solid;
+    border-radius: 50%;
+    border-color: transparent;
+    transition: .7s ease-in;
+    cursor: pointer;
+    color:gray!important;
+    
+    
+}
+
+.social a:hover{
+    border:solid;
+    border-radius: 50%;
+    color: white!important;
+}
+
+socialBorder{
+    display: inline-block;
+    border:solid thin;
+    border-radius: 50%;
+    margin: 10px 10px;
+    
+}
+
+#myBtn:hover{
+    color:gray;
+    border: solid thin gray;
+    background-color: transparent;
+}
+#contactMe{
+    margin-bottom: 40px;
+}
+
+#contactMe:hover{
+    color:gray;
+    border: solid thin gray;
+    background-color: transparent;
+}
+
+.order p{
+    font-family:bhoma;
+    font-size: 20px;
+    
+}

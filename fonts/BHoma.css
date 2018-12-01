@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BHoma';
+    src: url('fonts/BHoma.eot');
+    src: url('fonts/BHoma.eot') format('embedded-opentype'),
+         url('fonts/BHoma.woff2') format('woff2'),
+         url('fonts/BHoma.woff') format('woff'),
+         url('fonts/BHoma.ttf') format('truetype'),
+         url('fonts/BHoma.svg#BHoma') format('svg');
+}
