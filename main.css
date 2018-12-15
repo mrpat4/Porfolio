@@ -97,7 +97,7 @@
     left: 1%;
     opacity: 0.5;
     background-color: wheat;
-    animation: rect 10s linear infinite;
+    animation: rect 50s linear infinite;
 }
 .tri{
     position: relative;
@@ -109,7 +109,7 @@
 	border-right: 200px solid green;
 	border-bottom: 100px solid transparent;
     opacity: 0.2;
-    animation: tri linear infinite 60s
+    animation: tri linear infinite 90s
 }
 .triSmall{
     position: relative;
@@ -511,7 +511,7 @@ footer p{
     border:solid;
     border-radius: 50%;
     border-color: transparent;
-    transition: .7s ease-in;
+    transition: 350ms ease-in;
     cursor: pointer;
     color:gray!important;
     
