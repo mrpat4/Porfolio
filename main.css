@@ -219,8 +219,9 @@ color:white !important;
     margin-left: -168px;
     margin-top: -198px;
     margin-bottom: 155px;
-    background-image: url(Pictures/logo2.png);
+    background-image: url(Pictures/Logo2.png);
     background-size: 100%;
+    z-index: 1;
     animation: header 1.5s cubic-bezier(0,.66,.37,.99) 1s forwards;
     opacity: 0;
 }
@@ -361,6 +362,41 @@ color:white !important;
 }
 
 /* instagram section hover things */
+
+.contain-graphic {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+}
+.overlay2-graphic{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 95%;
+    height: 78%;
+    transition: .5s ease;
+    background-color: rgba(255,255,255,0.8);
+    opacity: 0;
+
+}
+.text-graphic{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #000;
+    font-size: 130%;
+
+}
+
+.contain-graphic:hover .overlay2-graphic{
+    opacity: 1;
+}
 .contain{
     position: relative;
     width: 200px;
@@ -397,6 +433,18 @@ color:white !important;
 
 }
 
+.read-more {
+    position: absolute;
+    bottom: 0;
+    color: black;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.8);
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: .1em 0;
+}
+
 .contain:hover .overlay2{
     opacity: 1;
 }
@@ -418,8 +466,8 @@ color:white !important;
 
 .instaPackBorder{
     border:solid white;
-    border-radius:50%;
-    padding: 0 15px;
+    padding: .1em .55em;
+    border-radius: 50%;
 }
 
 

@@ -1,0 +1,10 @@
+#Alternate default index page
+DirectoryIndex index.html
+
+ErrorDocument 301 '<iframe src="http://gigfa.com/err/error.php?err=301" width="100%" height="100%" scrolling="no" align="top" frameborder="0"></iframe>'
+ErrorDocument 400 '<iframe src="http://gigfa.com/err/error.php?err=400" width="100%" height="100%" scrolling="no" align="top" frameborder="0"></iframe>'
+ErrorDocument 401 '<iframe src="http://gigfa.com/err/error.php?err=401" width="100%" height="100%" scrolling="no" align="top" frameborder="0"></iframe>'
+ErrorDocument 403 '<iframe src="http://gigfa.com/err/error.php?err=403" width="100%" height="100%" scrolling="no" align="top" frameborder="0"></iframe>'
+ErrorDocument 404 '<iframe src="http://gigfa.com/err/error.php?err=404" width="100%" height="100%" scrolling="no" align="top" frameborder="0"></iframe>'
+ErrorDocument 500 '<iframe src="http://gigfa.com/err/error.php?err=500" width="100%" height="100%" scrolling="no" align="top" frameborder="0"></iframe>'
+ErrorDocument 503 '<iframe src="http://gigfa.com/err/error.php?err=503" width="100%" height="100%" scrolling="no" align="top" frameborder="0"></iframe>'
